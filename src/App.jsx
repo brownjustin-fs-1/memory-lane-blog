@@ -5,6 +5,8 @@ const posts = [
     id: "learning-react",
     title: "Learning React One Step at a Time",
     date: "May 2026",
+    image:
+      "https://images.unsplash.com/photo-1633356122544-f134324a6cee?q=80&w=1200&auto=format&fit=crop",
     summary:
       "React has helped me understand how modern websites are built with reusable pieces.",
     content:
@@ -14,6 +16,8 @@ const posts = [
     id: "github-workflow",
     title: "Why GitHub Matters",
     date: "May 2026",
+    image:
+      "https://images.unsplash.com/photo-1618401471353-b98afee0b2eb?q=80&w=1200&auto=format&fit=crop",
     summary:
       "GitHub is important because it keeps projects organized and makes code easier to manage.",
     content:
@@ -23,10 +27,23 @@ const posts = [
     id: "career-change",
     title: "From Truck Driving to Web Development",
     date: "May 2026",
+    image:
+      "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?q=80&w=1200&auto=format&fit=crop",
     summary:
       "My goal is to build a future in web development while learning one project at a time.",
     content:
       "My background is different from a lot of people entering web development. I have spent years working as a truck driver, which taught me discipline, patience, and the importance of staying focused. Now I am working toward a new career in web development. The transition is challenging, but every project helps me build confidence. I am learning how to solve problems, read documentation, and create websites that actually work. This Memory Lane project represents part of that journey because it shows what I have learned so far and where I am trying to go.",
+  },
+  {
+    id: "react-api-best-practices",
+    title: "Best Practices for Using APIs Within React",
+    date: "May 2026",
+    image:
+      "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?q=80&w=1200&auto=format&fit=crop",
+    summary:
+      "Using APIs in React is easier when the code is organized, secure, and built around clear user feedback.",
+    content:
+      "One important part of modern web development is learning how to work with APIs inside a React application. APIs allow a website to request outside data and display it in a useful way for the user. While working with React, I have learned that it is best to keep API code organized, avoid repeating the same request logic in multiple places, and make sure the user knows when data is loading or when something goes wrong. A good React app should not just fetch data; it should also handle loading states, errors, and empty results in a way that makes sense. Another best practice is protecting sensitive information. API keys should not be placed directly into public code, especially if the project is being pushed to GitHub. Using environment variables and a proper .gitignore file helps keep private information out of the repository. Overall, using APIs in React teaches important habits like planning, organization, debugging, and thinking about the user's experience.",
   },
 ];
 
@@ -50,8 +67,8 @@ function Layout({ children }) {
           <p className="eyebrow">Web Development Journal</p>
           <h1>Documenting my path through code, creativity, and growth.</h1>
           <p>
-            This static blog shares a few short posts about what I have learned
-            recently while studying web development.
+            This static blog shares short posts about what I have learned while
+            studying web development.
           </p>
           <Link to="/posts" className="button">
             View Posts
@@ -80,6 +97,7 @@ function Home() {
         <div className="card-grid">
           {posts.map((post) => (
             <article className="card" key={post.id}>
+              <img src={post.image} alt={post.title} className="card-image" />
               <p className="post-date">{post.date}</p>
               <h3>{post.title}</h3>
               <p>{post.summary}</p>
@@ -109,6 +127,7 @@ function Posts() {
         <div className="post-list">
           {posts.map((post) => (
             <Link to={`/posts/${post.id}`} className="post-row" key={post.id}>
+              <img src={post.image} alt={post.title} className="row-image" />
               <div>
                 <p className="post-date">{post.date}</p>
                 <h3>{post.title}</h3>
@@ -144,6 +163,7 @@ function PostDetail() {
   return (
     <Layout>
       <article className="section narrow article">
+        <img src={post.image} alt={post.title} className="article-image" />
         <p className="post-date">{post.date}</p>
         <h2>{post.title}</h2>
         <p>{post.content}</p>

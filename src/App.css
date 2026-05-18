@@ -134,7 +134,7 @@ a {
 
 .card-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(2, 1fr);
   gap: 22px;
 }
 
@@ -145,6 +145,14 @@ a {
   border-radius: 20px;
   padding: 24px;
   box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+}
+
+.card-image {
+  width: 100%;
+  height: 190px;
+  object-fit: cover;
+  border-radius: 16px;
+  margin-bottom: 18px;
 }
 
 .card h3,
@@ -176,10 +184,17 @@ a {
 }
 
 .post-row {
-  display: flex;
+  display: grid;
+  grid-template-columns: 140px 1fr auto;
   align-items: center;
-  justify-content: space-between;
-  gap: 16px;
+  gap: 20px;
+}
+
+.row-image {
+  width: 140px;
+  height: 100px;
+  border-radius: 14px;
+  object-fit: cover;
 }
 
 .post-row:hover,
@@ -197,6 +212,15 @@ a {
 
 .article {
   font-size: 1.1rem;
+}
+
+.article-image {
+  width: 100%;
+  max-height: 380px;
+  object-fit: cover;
+  border-radius: 24px;
+  margin-bottom: 28px;
+  border: 1px solid #374151;
 }
 
 .article-actions {
@@ -225,8 +249,13 @@ a {
   }
 
   .post-row {
+    grid-template-columns: 1fr;
     align-items: flex-start;
-    flex-direction: column;
+  }
+
+  .row-image {
+    width: 100%;
+    height: 180px;
   }
 
   .hero-content {
