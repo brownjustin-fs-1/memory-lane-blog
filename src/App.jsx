@@ -2,6 +2,17 @@ import { Link, Route, Routes, useParams } from "react-router-dom";
 
 const posts = [
   {
+    id: "deploying-movieshelf",
+    title: "Building and Deploying My MovieShelf MERN App",
+    date: "May 2026",
+    image: "/movieshelf-screenshot.png",
+    summary:
+      "MovieShelf helped me understand how React, Express, MongoDB, Render, and Vercel work together in a full-stack project.",
+    content:
+      "One recent project I completed was MovieShelf, a MERN CRUD application that allows users to create, read, update, and delete movie entries. The frontend was built with React and Vite, while the backend used Node.js and Express. I also connected the application to MongoDB Atlas so the movie data would be stored in a real database instead of only existing in the browser. This helped me better understand how a frontend form can send information to an API, how the API can process that request, and how MongoDB stores the result. The deployment process taught me just as much as the coding process. I deployed the backend API to Render and the frontend to Vercel. During deployment, I had to troubleshoot environment variables, MongoDB network access, and CORS errors so the frontend and backend could communicate correctly. The biggest lesson I learned is that full-stack development is not only about writing code. It is also about connecting different services together and making sure each part of the application is configured properly. MovieShelf gave me more confidence working with React, APIs, databases, and live deployment workflows.",
+  },
+
+  {
     id: "learning-react",
     title: "Learning React One Step at a Time",
     date: "May 2026",
