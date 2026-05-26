@@ -2,6 +2,17 @@ import { Link, Route, Routes, useParams } from "react-router-dom";
 
 const posts = [
   {
+    id: "authentication-flow",
+    title: "Understanding Authentication Flow",
+    date: "May 2026",
+    image:
+      "https://images.unsplash.com/photo-1563986768609-322da13575f3?q=80&w=1200&auto=format&fit=crop",
+    summary:
+      "Authentication flow explains how an application checks who a user is before allowing access to protected features.",
+    content:
+      "Authentication flow is the process an application uses to confirm a user's identity and decide what that user is allowed to access. A basic example starts when a user creates an account or logs in with a username and password. The server receives that information, checks it against the database, and then responds based on whether the login details are correct. If the login is successful, the application may create a token or session that proves the user is authenticated. This token can then be sent with future requests so the user does not have to log in again every time they click a new page. Authentication is important because many applications need to protect private information and limit access to certain features. For example, a user should only be able to edit their own account, view their own data, or access pages that require a login. A good authentication flow also protects passwords by never storing them as plain text. Instead, passwords should be hashed before being saved. Learning about authentication flow helps me understand how frontend forms, backend routes, databases, and security practices all connect together in a real application.",
+  },
+  {
     id: "deploying-movieshelf",
     title: "Building and Deploying My MovieShelf MERN App",
     date: "May 2026",
@@ -11,7 +22,6 @@ const posts = [
     content:
       "One recent project I completed was MovieShelf, a MERN CRUD application that allows users to create, read, update, and delete movie entries. The frontend was built with React and Vite, while the backend used Node.js and Express. I also connected the application to MongoDB Atlas so the movie data would be stored in a real database instead of only existing in the browser. This helped me better understand how a frontend form can send information to an API, how the API can process that request, and how MongoDB stores the result. The deployment process taught me just as much as the coding process. I deployed the backend API to Render and the frontend to Vercel. During deployment, I had to troubleshoot environment variables, MongoDB network access, and CORS errors so the frontend and backend could communicate correctly. The biggest lesson I learned is that full-stack development is not only about writing code. It is also about connecting different services together and making sure each part of the application is configured properly. MovieShelf gave me more confidence working with React, APIs, databases, and live deployment workflows.",
   },
-
   {
     id: "learning-react",
     title: "Learning React One Step at a Time",
